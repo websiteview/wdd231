@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD231</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Course Home Page for WDD 231">
+  <meta name="author" content="Frinx Hanford Mendoza">
+  <title>Home | WDD 231</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
 </head>
 <body>
-    <h1>WDD 231 - Frinx Mendoza</h1>
+  <header>
+    <img src="images/graduate.svg" alt="Site Logo" class="logo">
+    <span>Student Progress</span>
+    <button id="menuBtn" aria-label="Open Menu">☰</button>
+  </header>
+
+  <nav id="mainNav">
+    <a href="#">Home</a>
+    <a href="#">Chamber Project</a>
+    <a href="#">Final Project</a>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+         Hi! My name is Frinx Hanford Mendoza Rivas. I am proud to be Miskito, originally from Nicaragua, and currently living in Guatemala 
+         — a place I now consider my second home. I'm passionate about learning web development and excited to be expanding my skills through 
+         the WDD 231 course.
+      </p>
+    </section>
+
+    <section class="photo">
+      <h2>Student Photo</h2>
+      <img src="images/frinx-photo.jpg" alt="Frinx Hanford Mendoza">
+    </section>
+
+    <section class="courses">
+      <h2>Web Certificate Courses</h2>
+      <div class="filters">
+        <button data-filter="all">All</button>
+        <button data-filter="CSE">CSE</button>
+        <button data-filter="WDD">WDD</button>
+      </div>
+      <div id="courseCards" class="cards"></div>
+      <p>Total Credits: <span id="totalCredits">0</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="socials">
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="#">X</a>
+    </div>
+    <p>&copy; <span id="currentyear"></span> • Frinx Hanford Mendoza • Quetzaltenango, Guatemala</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>

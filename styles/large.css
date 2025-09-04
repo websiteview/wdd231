@@ -1,0 +1,143 @@
+@media (min-width: 640px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #menuBtn {
+    display: none;
+  }
+
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .about {
+    grid-column: 1 / 2;
+    background-color: #f0f0f0;
+    padding: 1rem;
+  }
+
+  .photo {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 1rem;
+  }
+
+  .photo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  .courses {
+    grid-column: 1 / -1;
+    background-color: #f0f0f0;
+    padding: 1rem;
+  }
+
+  .courses h2 {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .filters button {
+    padding: 0.5rem 1.5rem;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+
+  .filters button:hover {
+    background-color: #aaa;
+  }
+
+  .cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 1rem;
+  }
+
+  .card {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+    min-width: 200px;
+    max-width: 250px;
+    flex: 1 1 200px;
+  }
+
+  .card:hover {
+    background-color: #e0ffe0;
+    border-color: #4CAF50;
+  }
+
+  #totalCredits {
+    font-weight: bold;
+  }
+
+  .courses p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #444;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #000;
+    color: #fff;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .socials a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+  }
+
+  .socials a:hover,
+  .socials a:focus {
+    text-decoration: underline;
+  }
+}
