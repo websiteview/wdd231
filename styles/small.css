@@ -39,6 +39,9 @@ nav {
 
 nav .active{
       background-color: rgb(0, 0, 0, 0.3);
+      color: white;
+      border-radius: 5px;
+      padding: 0.5rem;
   }
 
 nav.open {
