@@ -36,6 +36,11 @@ nav {
   margin-top: 0.5rem;
 }
 
+
+nav .active{
+      background-color: rgb(0, 0, 0, 0.3);
+  }
+
 nav.open {
   display: flex;
 }
