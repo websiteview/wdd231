@@ -19,7 +19,9 @@
   }
 
   nav a:hover {
-  background-color: rgb(255, 255, 225, 0.2);
+      background-color: rgba(93, 93, 89, 0.2);
+      border-radius: 5px;
+      padding: 0.5rem;
   }
 
   nav a.active{
