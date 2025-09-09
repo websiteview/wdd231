@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+body {
+  font-family: 'Slabo 27px', serif;
+  margin: 0;
+  background: #f0f0f0;
+  color: #333;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1em;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #443c68;
+}
+
+footer {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Grid container for cards */
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Each card */
+#cards section {
+  background-color: #d1cae4;
+  padding: 1em;
+  border: 1px solid #999;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+#cards section:hover {
+  transform: scale(1.02);
+}
+
+#cards h2 {
+  color: #443c68;
+  font-size: 1.2rem;
+}
+
+#cards img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1em;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Mobile view: single column */
+@media screen and (max-width: 600px) {
+  #cards {
+    grid-template-columns: 1fr;
+  }
+}
+
