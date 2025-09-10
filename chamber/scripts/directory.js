@@ -31,23 +31,23 @@ async function getMembers() {
 function displayMembers(members) {
   directory.innerHTML = "";
 
-  members.forEach((member, index) => {
-    const div = document.createElement("div");
+  const isGrid = directory.classList.contains("grid-view");
 
-    // Usa card o list-item según la clase actual
-    const isGrid = directory.classList.contains("grid-view");
+  members.forEach((member) => {
+    const div = document.createElement("div");
     div.classList.add(isGrid ? "card" : "list-item");
 
-    // Agrega contenido
+    const websiteLink = member.website
+      ? `<a href="${member.website}" target="_blank" rel="noopener noreferrer">${member.website}</a>`
+      : "";
+
     div.innerHTML = `
       ${isGrid ? `<img src="images/${member.image}" alt="${member.name} logo" loading="lazy">` : ""}
       <h3>${member.name}</h3>
       <p>${member.address}</p>
       <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">${member.website}</a>
+      ${websiteLink}
     `;
-
-    
 
     directory.appendChild(div);
   });

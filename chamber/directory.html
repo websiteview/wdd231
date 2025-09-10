@@ -7,6 +7,13 @@
   <meta name="author" content="Frinx Hanford Mendoza">
   <title>Directory | Chamber of Commerce of Quetzaltenango</title>
 
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts example, ajusta la URL a la fuente que uses -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
   <link rel="icon" href="images/1-3c2fe52f.ico">
@@ -20,15 +27,16 @@
   <script src="scripts/directory.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Business Directory</h1>
-    <div class="view-toggle">
-      <button id="gridBtn" title="Grid View">&#x1F5C0;</button>
-      <button id="listBtn" title="List View">&#x2630;</button>
-    </div>
-  </header>
 
   <main>
+    <h1>Directory | Chamber of Commerce of Quetzaltenango</h1>
+    <header>
+      <div class="view-toggle">
+        <button id="gridBtn" title="Grid View">&#x1F5C0;</button>
+        <button id="listBtn" title="List View">&#x2630;</button>
+      </div>
+    </header>
+
     <div id="directory" class="grid-view"></div>
   </main>
 
