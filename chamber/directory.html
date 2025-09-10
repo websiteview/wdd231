@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Course Directory Page for WDD 231">
-  <meta name="author" content="Frinx Hanford Mendoza">
-  <title>Frinx Hanford Mendoza | WDD 231 Directory Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Course Directory Page for WDD 231" />
+  <meta name="author" content="Frinx Hanford Mendoza" />
+  <title>Directory | Chamber of Commerce of Quetzaltenango</title>
 
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
-  <link rel="icon" href="images/1-3c2fe52f.ico">
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+  <link rel="icon" href="images/1-3c2fe52f.ico" />
 
-  <meta property="og:title" content="Directory of the Chamber of Commerce of Quetzaltenango">
-  <meta property="og:description" content="This website will serve as a resource hub for businesses in the city of Quetzaltenango. The site will provide information on local events, host networking opportunities, create business directories, and encourage local shopping. It aims to promote local economic growth, support local businesses, and foster a sense of community between the businesses.">
-  <meta property="og:url" content="https://websiteview.github.io/wdd231/chamber/directory.html">
+  <!-- Open Graph for Facebook -->
+  <meta property="og:title" content="Directory of the Chamber of Commerce of Quetzaltenango" />
+  <meta property="og:description" content="Business directory to support the local economy of Quetzaltenango." />
   <meta property="og:image" content="https://websiteview.github.io/wdd231/chamber/images/rsz_3tikal3.jpg" />
+  <meta property="og:url" content="https://websiteview.github.io/wdd231/chamber/directory.html" />
+
+  <script src="scripts/directory.js" defer></script>
 </head>
 <body>
-    <header>
-  <h1>Directory</h1>
-</header>
-<main>
-  <div id="cards"></div>
-</main>
-<footer>
-  Frinx Hanford Mendoza | Directory
-</footer>
+  <header>
+    <h1>Business Directory</h1>
+    <div class="view-toggle">
+      <button id="gridBtn" title="Grid View">&#x1F5C0;</button>
+      <button id="listBtn" title="List View">&#x2630;</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="directory" class="grid-view"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Frinx Hanford Mendoza | WDD 231 | Last Updated: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/directory.js" defer></script>
 </body>
 </html>
