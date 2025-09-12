@@ -20,10 +20,11 @@ header {
 
 /* Center the view-toggle buttons and add spacing */
 .view-toggle {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
+  display: flex;            /* Added: make buttons flex container */
+  justify-content: center;  /* Added: center buttons horizontally */
+  gap: 0.5rem;              /* Added: space between buttons */
   margin: 1rem auto;
+  flex-wrap: wrap;          /* Added: allow buttons to wrap on small screens */
 }
 
 .view-toggle button {
@@ -110,6 +111,11 @@ header {
   .view-toggle button {
     font-size: 1.2rem;
     padding: 0.4rem 0.8rem;
+  }
+
+  /* Fix for double zebra striping at the top */
+  #directory.list-view .list-item:first-child {
+    background-color: white !important;
   }
 }
 
