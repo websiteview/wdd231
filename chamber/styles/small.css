@@ -124,7 +124,7 @@ header {
 
   /* Fix for double zebra striping at the top */
   #directory.list-view .list-item:first-child {
-    background-color: white !important;
+    background-color: white ;
   }
 
   /* Limitar altura del directorio y agregar scroll para evitar que se pase */
