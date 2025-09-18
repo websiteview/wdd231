@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  background: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+figure {
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
