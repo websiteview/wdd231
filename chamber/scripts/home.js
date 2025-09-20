@@ -1,9 +1,9 @@
 // =========================
 // Weather API (3-Day Forecast)
 // =========================
-const apiKey = "YOUR_API_KEY"; // 🔁 Replace with your actual OpenWeatherMap API key
-const lat = 14.85;             // Latitude for Quetzaltenango
-const lon = -91.52;            // Longitude for Quetzaltenango
+const apiKey = "21b91d9332a0e7cc9238c8edb791ea77"; // Tu API key
+const lat = 14.85;             // Quetzaltenango
+const lon = -91.52;
 
 async function getWeather() {
   try {
@@ -12,15 +12,15 @@ async function getWeather() {
     if (!response.ok) throw new Error("Weather data fetch failed");
     const data = await response.json();
 
-    // Current weather (first item)
+    // Clima actual (primer item)
     const current = data.list[0];
     document.querySelector("#temp").textContent = `${current.main.temp.toFixed(1)} °C`;
     document.querySelector("#desc").textContent = current.weather[0].description;
 
-    // Forecast for the next 3 days (each 8 items = 24 hours)
+    // Pronóstico para los próximos 3 días (cada 8 items = 24 horas)
     const forecastEls = document.querySelectorAll(".forecast-day");
     for (let i = 0; i < 3; i++) {
-      const item = data.list[i * 8]; // 0, 8, 16
+      const item = data.list[i * 8];
       if (forecastEls[i]) {
         forecastEls[i].textContent = `${item.main.temp.toFixed(1)} °C`;
       }
@@ -38,21 +38,18 @@ async function loadSpotlights() {
   try {
     const response = await fetch("data/members.json");
     if (!response.ok) throw new Error("Members data fetch failed");
-    const { members } = await response.json();
+    const members = await response.json();
 
-    // Filter for Gold and Silver members
     const goldSilver = members.filter(m =>
       m.membership === "Gold" || m.membership === "Silver"
     );
 
-    // Randomly pick 2–3 members
     const selected = [];
     while (selected.length < 3 && goldSilver.length > 0) {
       const rand = goldSilver[Math.floor(Math.random() * goldSilver.length)];
       if (!selected.includes(rand)) selected.push(rand);
     }
 
-    // Insert into DOM
     const container = document.querySelector(".spotlight-container");
     if (!container) {
       console.error("Spotlight container not found.");
