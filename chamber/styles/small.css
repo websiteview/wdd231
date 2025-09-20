@@ -1,3 +1,5 @@
+/* ========== BASE STYLES & MOBILE FIRST ========== */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,138 +7,166 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   line-height: 1.6;
   padding: 1rem;
   background-color: #f5f5f5;
 }
 
-/* Updated header with padding for spacing */
 header {
   text-align: center;
   margin-bottom: 1rem;
   padding: 1rem 0;
 }
 
-/* Center the view-toggle buttons and add spacing */
-.view-toggle {
-  display: flex;            /* Added: make buttons flex container */
-  justify-content: center;  /* Added: center buttons horizontally */
-  gap: 0.5rem;              /* Added: space between buttons */
-  margin: 1rem auto;
-  flex-wrap: wrap;          /* Added: allow buttons to wrap on small screens */
-  max-width: 150px;         /* Added: limit total width so buttons don't expand */
-  padding: 0.2rem 0;        /* Added: reduce vertical padding */
-}
-
-.view-toggle button {
-  font-size: 1.5rem;
-  margin: 0;                /* Changed: remove horizontal margin to fit inside max-width */
-  padding: 0;               /* Changed: remove padding to fix button size */
-  width: 50px;              /* Added: fixed width */
-  height: 50px;             /* Added: fixed height for square buttons */
-  border: 2px solid #0077b6;
-  background-color: white;
-  color: #0077b6;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-  display: flex;            /* Added: center icon inside button */
+.logo {
+  display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Buttons active state */
-.view-toggle button.active {
-  background-color: #005f73; /* tono más oscuro */
-  color: white; /* texto claro para contraste */
-  border-color: #005f73;
-}
-
-/* Grid view setup */
-#directory.grid-view {
-  display: grid;
-  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-/* List view setup */
-#directory.list-view {
-  display: block;
+.logo img {
+  border-radius: 8px;
 }
 
-/* Shared styles for cards and list items */
-.card, .list-item {
-  background-color: white;
+nav {
+  margin-top: 1rem;
+}
+
+#menuBtn {
+  display: none; /* Hidden on large by default */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#navMenu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+#navMenu a {
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: bold;
+}
+
+#navMenu a.active {
+  color: #005f73;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cta {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cta .btn {
+  background-color: #0077b6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.cta .btn:hover {
+  background-color: #005f73;
+}
+
+/* ===== Events Section ===== */
+#events {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#events h2 {
+  margin-bottom: 1rem;
+  color: #0077b6;
+}
+
+/* ===== Weather Section ===== */
+#weather {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#weather h2 {
+  margin-bottom: 1rem;
+  color: #0077b6;
+}
+
+.forecast p {
+  margin: 0.5rem 0;
+}
+
+/* ===== Spotlights Section ===== */
+#spotlights {
+  background-color: #ffffff;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
-/* Specific styles for list items */
-.list-item {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  text-align: left;
-  padding: 1rem;
+#spotlights h2 {
+  margin-bottom: 1rem;
+  color: #0077b6;
 }
 
-/* Zebra striping only for list view */
-#directory.list-view .list-item:nth-child(even) {
-  background-color: #e8fdfd;
+.spotlight-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-#directory.list-view .list-item:nth-child(odd) {
-  background-color: white;
-}
-
-/* Ensure cards in grid view have white background, no striping */
-#directory.grid-view .card {
-  background-color: white !important;
-}
-
-/* Móvil: mejora el listado para que sea más legible y ordenado */
-@media (max-width: 600px) {
-  /* Cambiar list-item a block para apilar el contenido */
-  #directory.list-view .list-item {
-    display: block;
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-    text-align: left;
-  }
-
-  /* Zebra striping sigue aplicando */
-  #directory.list-view .list-item:nth-child(even) {
-    background-color: #e8fdfd;
-  }
-  #directory.list-view .list-item:nth-child(odd) {
-    background-color: white;
-  }
-
-  /* Smaller buttons on mobile */
-  .view-toggle button {
-    font-size: 1.2rem;
-    padding: 0;           /* ajustado para mantener tamaño fijo */
-    width: 45px;          /* más pequeño en móvil */
-    height: 45px;         /* más pequeño en móvil */
-  }
-
-  /* Fix for double zebra striping at the top */
-  #directory.list-view .list-item:first-child {
-    background-color: white !important;
-  }
-
-  /* Limitar altura del directorio y agregar scroll para evitar que se pase */
-  #directory {
-    max-height: 400px;    /* ajusta este valor si quieres más o menos altura */
-    overflow-y: auto;
-  }
-}
-
+/* ===== Footer ===== */
 footer {
   margin-top: 2rem;
   text-align: center;
   font-size: 0.9rem;
   color: #555;
+}
+
+/* ===== Responsive Nav (hamburger) on mobile ===== */
+@media (max-width: 768px) {
+  #menuBtn {
+    display: block;
+  }
+
+  #navMenu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navMenu.open {
+    display: flex;
+  }
 }

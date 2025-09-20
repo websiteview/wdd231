@@ -1,27 +1,25 @@
-@media screen and (min-width: 700px) {
-  #directory.grid-view {
-    grid-template-columns: repeat(2, 1fr);
+/* ========== LARGE SCREEN ENHANCEMENTS ========== */
+
+@media screen and (min-width: 768px) {
+  .spotlight-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-}
 
-@media screen and (min-width: 1024px) {
-  #directory.grid-view {
-    grid-template-columns: repeat(3, 1fr);
+  .spotlight-container > * {
+    flex: 1 1 30%;
   }
-}
 
-/* Zebra striping for list view */
-#directory.list-view .member:nth-child(even) {
-  background-color: #eef9f8;
-}
+  #navMenu {
+    display: flex !important;
+  }
 
-#directory.list-view .member:nth-child(odd) {
-  background-color: #ffffff;
-}
+  #menuBtn {
+    display: none !important;
+  }
 
-/* Disable zebra striping on smaller screens */
-@media (max-width: 768px) {
-  #directory.list-view .member {
-    background-color: #ffffff !important;
+  .hero {
+    margin-bottom: 3rem;
   }
 }

@@ -38,12 +38,20 @@ async function loadSpotlights() {
   try {
     const response = await fetch("data/members.json");
     if (!response.ok) throw new Error("Members data fetch failed");
-    const members = await response.json();
+    const data = await response.json();
 
+    const members = Array.isArray(data) ? data : data.members;
+
+    if (!Array.isArray(members)) {
+      throw new Error("Members data is not an array");
+    }
+
+    // Filtra miembros con membership Gold (3) y Silver (2)
     const goldSilver = members.filter(m =>
-      m.membership === "Gold" || m.membership === "Silver"
+      m.membership === 3 || m.membership === 2
     );
 
+    // Selecciona aleatoriamente hasta 3 miembros sin repetir
     const selected = [];
     while (selected.length < 3 && goldSilver.length > 0) {
       const rand = goldSilver[Math.floor(Math.random() * goldSilver.length)];
@@ -56,19 +64,26 @@ async function loadSpotlights() {
       return;
     }
 
+    container.innerHTML = "";  // Limpia contenido previo
+
+    // Inserta tarjetas en el DOM
     selected.forEach(member => {
+      const membershipText = member.membership === 3 ? "Gold" : "Silver";
+      const imagePath = `images/${member.image}`; // Ajusta si tus imágenes están en otra carpeta
+
       const card = document.createElement("div");
       card.classList.add("spotlight");
       card.innerHTML = `
-        <img src="${member.logo}" alt="${member.name} logo">
+        <img src="${imagePath}" alt="${member.name} logo" />
         <h3>${member.name}</h3>
         <p>${member.address}</p>
         <p>${member.phone}</p>
-        <a href="${member.website}" target="_blank">Visit Website</a>
-        <p class="level">${member.membership}</p>
+        <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
+        <p class="level">${membershipText}</p>
       `;
       container.appendChild(card);
     });
+
   } catch (error) {
     console.error("Spotlight error:", error);
   }
