@@ -13,42 +13,58 @@ body {
   background-color: #f5f5f5;
 }
 
+/* HEADER layout con flex como Student Progress */
 header {
-  text-align: center;
-  margin-bottom: 1rem;
-  padding: 1rem 0;
-}
-
-.logo {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Logo alinea items igual que Student Progress */
+.logo {
+  height: 40px;
+  display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
 .logo img {
   border-radius: 8px;
-}
-
-nav {
-  margin-top: 1rem;
+  height: 40px;  /* para igualar tamaño */
 }
 
 #menuBtn {
-  display: none; /* Hidden on large by default */
+  display: block; /* Mantener visible en mobile */
+  font-size: 1.5rem;
   background: none;
   border: none;
-  font-size: 2rem;
   cursor: pointer;
 }
 
+/* NAV layout oculto y luego visible en mobile */
+nav {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+nav.open {
+  display: flex;
+}
+
+/* Links nav estilos para simular Student Progress */
 #navMenu {
   list-style: none;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 1rem;
-  flex-wrap: wrap;
   margin-top: 0.5rem;
+  padding: 0;
 }
 
 #navMenu a {
@@ -58,14 +74,17 @@ nav {
 }
 
 #navMenu a.active {
-  color: #005f73;
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  border-radius: 5px;
+  padding: 0.5rem;
 }
 
-/* ===== Hero Section ===== */
+/* HERO con margin bottom igual */
 .hero {
+  margin-bottom: 2rem;
   position: relative;
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 .hero img {
@@ -95,58 +114,14 @@ nav {
   background-color: #005f73;
 }
 
-/* ===== Events Section ===== */
-#events {
-  background-color: #ffffff;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-#events h2 {
-  margin-bottom: 1rem;
-  color: #0077b6;
-}
-
-/* ===== Weather Section ===== */
-#weather {
-  background-color: #ffffff;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-#weather h2 {
-  margin-bottom: 1rem;
-  color: #0077b6;
-}
-
-.forecast p {
-  margin: 0.5rem 0;
-}
-
-/* ===== Spotlights Section ===== */
-#spotlights {
-  background-color: #ffffff;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-#spotlights h2 {
-  margin-bottom: 1rem;
-  color: #0077b6;
-}
-
+/* SPOTLIGHT container flex column */
 .spotlight-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-/* ===== Footer ===== */
+/* Footer */
 footer {
   margin-top: 2rem;
   text-align: center;
@@ -154,7 +129,7 @@ footer {
   color: #555;
 }
 
-/* ===== Responsive Nav (hamburger) on mobile ===== */
+/* Responsive Nav (hamburger) on mobile */
 @media (max-width: 768px) {
   #menuBtn {
     display: block;
@@ -169,4 +144,39 @@ footer {
   #navMenu.open {
     display: flex;
   }
+}
+
+/* CARDS container y CARD igual que Student Progress */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.card {
+  width: 90%;
+  max-width: 300px;
+  min-height: 120px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card p {
+  margin: 0.25rem 0;
+  font-size: 0.85rem;
+  color: #444;
 }

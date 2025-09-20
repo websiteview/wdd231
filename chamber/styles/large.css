@@ -22,4 +22,48 @@
   .hero {
     margin-bottom: 3rem;
   }
+
+  /* HEADER layout igual que Student Progress en large */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  /* Nav */
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: transparent;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  #navMenu {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #navMenu a.active {
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+
+  /* Cards en desktop con flex dirección columna y centrado igual */
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 300px;
+    width: 100%;
+  }
 }
