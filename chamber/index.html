@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Homepage for the Chamber of Commerce of Quetzaltenango">
+  <meta name="author" content="Frinx Hanford Mendoza">
+  <title>Chamber of Commerce | Home</title>
+
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="icon" href="images/1-3c2fe52f.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Chamber of Commerce of Quetzaltenango">
+  <meta property="og:description" content="Welcome to the Chamber of Commerce of Quetzaltenango. Connect with local businesses, discover events, and join us today!">
+  <meta property="og:image" content="https://websiteview.github.io/wdd231/chamber/images/rsz_3tikal3.jpg">
+  <meta property="og:url" content="https://websiteview.github.io/wdd231/chamber/index.html">
+
+  <!-- Scripts -->
+  <script src="scripts/home.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/Xela logo chamber of commerce.png" alt="Chamber Logo" width="60" height="60">
+      <h1>Quetzaltenango Chamber of Commerce</h1>
+    </div>
+    <nav>
+      <button id="menuBtn" aria-label="Toggle Menu">☰</button>
+      <ul id="navMenu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width: 768px)">
+        <img src="images/hero-small.webp" alt="Quetzaltenango City View" width="100%" height="auto">
+      </picture>
+      <div class="cta">
+        <a href="join.html" class="btn">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- Current Events -->
+    <section id="events">
+      <h2>Current Events</h2>
+      <ul>
+        <li>📅 Business Expo – October 5, 2025</li>
+        <li>📅 Networking Night – October 12, 2025</li>
+        <li>📅 Leadership Workshop – October 20, 2025</li>
+      </ul>
+    </section>
+
+    <!-- Weather -->
+
+    <section id="weather">
+      <h2>Weather in Quetzaltenango</h2>
+      <p>Current: <span id="temp">--</span> | <span id="desc">--</span></p>
+      <div class="forecast">
+        <p>Tomorrow: <span class="forecast-day"></span></p>
+        <p>Day 2: <span class="forecast-day"></span></p>
+        <p>Day 3: <span class="forecast-day"></span></p>
+      </div>
+    </section>
+
+    <!-- Spotlights -->
+    <section id="spotlights">
+      <h2>Member Spotlights</h2>
+      <div class="spotlight-container">
+        <!-- JS will insert spotlight cards here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Frinx Hanford Mendoza | WDD 231 Chamber Project</p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+</html>
