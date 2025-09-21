@@ -58,19 +58,23 @@ header {
   border-radius: 8px;
 }
 
-.logo h1 {
+/* Quitamos el h1 dentro de .logo porque ahora estará en main */
+/* .logo h1 {
   font-size: 1.8rem;
   color: var(--blue-dark);
   font-weight: 700;
-}
+} */
 
 /* === MODIFICACIÓN 1: Agrandar y centrar el h1 en pantallas grandes (desktop) === */
 @media (min-width: 1024px) {
+  /* No aplicamos h1 dentro de logo */
+  /*
   .logo h1 {
     font-size: 2.8rem;
     text-align: center;
     width: 100%;
   }
+  */
 }
 /* === FIN MODIFICACIÓN 1 === */
 
@@ -418,4 +422,31 @@ footer {
   .spotlight-container > * {
     padding: 1.2rem;
   }
+}
+
+/* === NUEVA MODIFICACIÓN: Posicionar el h1 dentro de main para que aparezca al lado del logo === */
+main > h1 {
+  display: flex;
+  justify-content: center;
+  top: 1.5rem;  /* Igual que padding top del header */
+  left: 80px;   /* Ancho del logo (60px) + margen */
+  font-size: 1.8rem;
+  color: var(--blue-dark);
+  font-weight: 700;
+  margin: 0;
+  z-index: 20;
+  pointer-events: none; /* Para que no interfiera con clics */
+}
+
+@media (min-width: 1024px) {
+  main > h1 {
+    font-size: 2.8rem;
+    left: 80px;
+  }
+}
+
+/* Para que main tenga espacio superior y el contenido no quede tapado por el h1 absoluto */
+main {
+  position: relative;
+  padding-top: 4rem;
 }
