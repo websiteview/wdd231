@@ -426,8 +426,7 @@ footer {
 
 /* === NUEVA MODIFICACIÓN: Posicionar el h1 dentro de main para que aparezca al lado del logo === */
 main > h1 {
-  display: flex;
-  justify-content: center;
+  position: absolute;
   top: 1.5rem;  /* Igual que padding top del header */
   left: 80px;   /* Ancho del logo (60px) + margen */
   font-size: 1.8rem;
