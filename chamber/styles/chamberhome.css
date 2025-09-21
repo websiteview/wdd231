@@ -127,6 +127,31 @@ nav {
   display: block;
 }
 
+/* === NUEVA CLASE PARA CENTRAR Y ESTILIZAR H2 === */
+.hero-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 119, 182, 0.5); /* azul semitransparente */
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  z-index: 2;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 1.6rem;
+    padding: 0.4rem 1rem;
+  }
+}
+/* === FIN NUEVA CLASE HERO HEADING === */
+
 .cta {
   position: absolute;
   bottom: 1.5rem;
@@ -290,7 +315,6 @@ footer {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 767px) {
-
   body {
     padding: 1rem 0.8rem;
   }
@@ -303,7 +327,6 @@ footer {
     border-radius: 0 0 10px 10px;
   }
 
-  /* === MODIFICACIÓN 2: Alinear logo e h1 verticalmente en móvil === */
   .logo {
     display: flex;
     align-items: center;
@@ -314,14 +337,12 @@ footer {
     font-size: 1.4rem;
     margin: 0;
   }
-  /* === FIN MODIFICACIÓN 2 === */
 
   nav {
     width: 100%;
     margin-top: 0.5rem;
   }
 
-  /* Menú hamburguesa visible en móviles */
   #menuBtn {
     display: block;
     position: absolute;
@@ -337,7 +358,6 @@ footer {
     z-index: 1001;
   }
 
-  /* Menú oculto por defecto en móvil */
   #navMenu {
     display: none;
     flex-direction: column;
@@ -346,13 +366,12 @@ footer {
     top: 100%;
     right: 0;
     width: 200px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     padding: 1rem 0;
     z-index: 1000;
   }
 
-  /* Menú visible cuando tiene clase 'open' */
   #navMenu.open {
     display: flex;
   }
@@ -384,7 +403,7 @@ footer {
     padding: 1rem 2rem;
     font-size: 1.1rem;
     border-radius: 40px;
-    box-shadow: 0 6px 15px rgba(0,119,182,0.5);
+    box-shadow: 0 6px 15px rgba(0, 119, 182, 0.5);
   }
 
   #events ul li {
