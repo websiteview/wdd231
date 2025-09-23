@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join the Chamber - Membership Application</title>
+  <link rel="stylesheet" href="styles/join.css">
+</head>
+<body>
+  <header>
+    <h1>Chamber of Commerce</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="join.html" aria-current="page">Join</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <form method="get" action="thankyou.html" novalidate>
+      <fieldset>
+        <legend>Membership Application Form</legend>
+
+        <label for="firstName">
+          First Name (required)
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            title="Applicant's first name"
+            autocomplete="given-name"
+            required
+          >
+        </label>
+
+        <label for="lastName">
+          Last Name (required)
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            title="Applicant's last name"
+            autocomplete="family-name"
+            required
+          >
+        </label>
+
+        <label for="orgTitle">
+          Organizational Title (min 7 letters, letters, hyphen, spaces)
+          <input
+            type="text"
+            id="orgTitle"
+            name="orgTitle"
+            title="Applicant's organizational title"
+            autocomplete="organization-title"
+            pattern="[A-Za-z\s\-]{7,}"
+            placeholder="e.g., Marketing Manager"
+          >
+        </label>
+
+        <label for="email">
+          Email Address (required)
+          <input
+            type="email"
+            id="email"
+            name="email"
+            title="Applicant's email address"
+            autocomplete="email"
+            placeholder="example@domain.com"
+            required
+          >
+        </label>
+
+        <label for="phone">
+          Mobile Phone (required)
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            title="Applicant's mobile phone number"
+            autocomplete="tel"
+            required
+          >
+        </label>
+
+        <label for="orgName">
+          Business/Organization Name (required)
+          <input
+            type="text"
+            id="orgName"
+            name="orgName"
+            title="Business or organization name"
+            autocomplete="organization"
+            required
+          >
+        </label>
+
+        <label for="membershipLevel">
+          Membership Level
+          <select id="membershipLevel" name="membershipLevel" title="Select your membership level" required>
+            <option value="">-- Select Level --</option>
+            <option value="np">NP Membership (Non-Profit, no fee)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+
+        <label for="description">
+          Business/Organization Description
+          <textarea id="description" name="description" title="Describe your business or organization" rows="4"></textarea>
+        </label>
+
+        <input type="hidden" id="timestamp" name="timestamp">
+
+        <input type="submit" value="Submit Membership Application">
+      </fieldset>
+    </form>
+
+    <section class="membership-cards" aria-label="Membership Level Information">
+      <div class="card" style="animation-delay: 0s;">
+        <h3>NP Membership</h3>
+        <p>For non-profit organizations with no fee.</p>
+        <a href="#np-modal" class="open-modal" data-modal="np-modal">More Info</a>
+      </div>
+
+      <div class="card" style="animation-delay: 0.2s;">
+        <h3>Bronze Membership</h3>
+        <p>Entry-level benefits and opportunities.</p>
+        <a href="#bronze-modal" class="open-modal" data-modal="bronze-modal">More Info</a>
+      </div>
+
+      <div class="card" style="animation-delay: 0.4s;">
+        <h3>Silver Membership</h3>
+        <p>Expanded benefits including advertising and event discounts.</p>
+        <a href="#silver-modal" class="open-modal" data-modal="silver-modal">More Info</a>
+      </div>
+
+      <div class="card" style="animation-delay: 0.6s;">
+        <h3>Gold Membership</h3>
+        <p>All benefits including premium advertising and exclusive events.</p>
+        <a href="#gold-modal" class="open-modal" data-modal="gold-modal">More Info</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals for membership info -->
+  <dialog id="np-modal" aria-labelledby="np-title" aria-describedby="np-desc">
+    <h2 id="np-title">NP Membership Benefits</h2>
+    <p id="np-desc">Designed for non-profit organizations with no fee. Benefits include participation in non-profit focused events and networking.</p>
+    <button class="close">Close</button>
+  </dialog>
+
+  <dialog id="bronze-modal" aria-labelledby="bronze-title" aria-describedby="bronze-desc">
+    <h2 id="bronze-title">Bronze Membership Benefits</h2>
+    <p id="bronze-desc">Includes access to special events, basic advertising opportunities, and community outreach programs.</p>
+    <button class="close">Close</button>
+  </dialog>
+
+  <dialog id="silver-modal" aria-labelledby="silver-title" aria-describedby="silver-desc">
+    <h2 id="silver-title">Silver Membership Benefits</h2>
+    <p id="silver-desc">Expanded advertising, training sessions, and event discounts included in this membership.</p>
+    <button class="close">Close</button>
+  </dialog>
+
+  <dialog id="gold-modal" aria-labelledby="gold-title" aria-describedby="gold-desc">
+    <h2 id="gold-title">Gold Membership Benefits</h2>
+    <p id="gold-desc">All inclusive benefits with premium advertising, exclusive events, and priority spotlight on the home page.</p>
+    <button class="close">Close</button>
+  </dialog>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Frinx Hanford Mendoza | WDD 231 Chamber Project</p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/join.js"></script>
+</body>
+</html>
