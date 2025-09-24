@@ -37,7 +37,6 @@ nav {
 }
 
 nav a + a::before {
-  
   color: white;
   margin: 0 0.5rem;
 }
@@ -65,8 +64,14 @@ main h1 {
 form {
   flex: 1 1 500px;
   max-width: 600px;
-  margin-left: 5rem;
-  
+  margin: 0 auto; /* Center by default */
+}
+
+@media (min-width: 769px) {
+  form {
+    margin-left: 5rem;  /* Only apply left margin on larger screens */
+    margin-right: 0;
+  }
 }
 
 fieldset {
@@ -210,6 +215,10 @@ footer {
   .container {
     flex-direction: column;
     align-items: center;
+  }
+
+  form {
+    margin: 0 auto;
   }
 
   .membership-cards {
