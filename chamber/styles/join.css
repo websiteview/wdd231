@@ -1,1 +1,236 @@
-nav a,nav a+a::before{color:#fff;margin:0 .5rem}.card,nav a:hover{background-color:#fff}.card a,nav a[aria-current=page]{text-decoration:underline}.card a,legend,nav a{font-weight:700}footer,header,main h1{text-align:center}body{margin:0;padding:0;font-family:Arial,sans-serif}header{background-color:#007acc;padding:1rem}nav a{text-decoration:none;padding:.5rem;transition:background-color .3s,color .3s}nav a:hover{color:#007acc;border-radius:4px}nav{font-size:1.1rem;color:#fff}.container{max-width:1200px;margin:2rem auto;padding:0 1rem;display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:flex-start;gap:3rem}.card,footer{padding:1rem}main h1{width:100%;margin-bottom:2rem}form{flex:1 1 500px;max-width:600px;margin:0 auto}@media (min-width:769px){form{margin-left:5rem;margin-right:0}}fieldset{border:2px solid #007acc;border-radius:15px;padding:2rem;box-shadow:0 0 10px rgba(0,122,204,.1);background-color:#f9f9f9}dialog button.close,input[type=submit],legend{background-color:#007acc;color:#fff}legend{padding:.5rem 1rem;border-radius:10px;font-size:1.2rem}form label{display:block;margin-bottom:1rem;font-weight:600}input[type=email],input[type=tel],input[type=text],select,textarea{display:block;width:100%;padding:.5rem;margin-top:.3rem;border-radius:6px;border:1px solid #ccc;font-size:1rem;box-sizing:border-box}input[type=submit]{margin-top:1.5rem;padding:.8rem 2rem;font-size:1.1rem;cursor:pointer;border:none;border-radius:6px;display:block;margin-left:auto;margin-right:auto;white-space:nowrap;transition:background-color .3s}input[type=submit]:hover{background-color:#005f99}.membership-cards{flex:1 1 300px;display:flex;flex-direction:column;gap:1rem;align-items:center;margin-top:12px}.card{border:1px solid #ccc;border-radius:10px;width:100%;max-width:300px;box-shadow:0 2px 6px rgba(0,0,0,.1);animation:1s forwards fadeInUp;opacity:0}.delay-0{animation-delay:0s}.delay-1{animation-delay:.2s}.delay-2{animation-delay:.4s}.delay-3{animation-delay:.6s}@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}.card a{color:#007acc;cursor:pointer}dialog{border:none;border-radius:10px;padding:1rem 2rem;max-width:400px;box-shadow:0 4px 10px rgba(0,0,0,.3)}dialog::backdrop{background:rgba(0,0,0,.4)}dialog button.close{margin-top:1rem;padding:.3rem .6rem;border:none;border-radius:4px;cursor:pointer}footer{background-color:#f1f1f1;margin-top:2rem;font-size:.9rem;color:#333}@media (max-width:768px){.container{flex-direction:column;align-items:center;justify-content:center}form{margin:0 auto;max-width:100%}.membership-cards{flex-direction:row;flex-wrap:wrap;justify-content:center}.card{width:90%;max-width:280px}}
+/* Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Navigation */
+header {
+  background-color: #007acc;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: white;
+  color: #007acc;
+  border-radius: 4px;
+}
+
+nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+nav {
+  font-size: 1.1rem;
+  color: white;
+}
+
+nav a + a::before {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+/* Container Layout */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+/* Heading */
+main h1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Form Styling */
+form {
+  flex: 1 1 500px;
+  max-width: 600px;
+  margin: 0 auto; /* Center by default */
+}
+
+@media (min-width: 769px) {
+  form {
+    margin-left: 5rem;  /* Only on larger screens */
+    margin-right: 0;
+  }
+}
+
+fieldset {
+  border: 2px solid #007acc;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 122, 204, 0.1);
+  background-color: #f9f9f9;
+}
+
+legend {
+  background-color: #007acc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #005f99;
+}
+
+/* Membership Cards */
+.membership-cards {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  background-color: white;
+}
+
+.delay-0 { animation-delay: 0s; }
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card a {
+  color: #007acc;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Dialogs */
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+dialog button.close {
+  margin-top: 1rem;
+  padding: 0.3rem 0.6rem;
+  background-color: #007acc;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 👈 Nuevo */
+  }
+
+  form {
+    margin: 0 auto;
+    max-width: 100%;         /* 👈 Nuevo */
+  }
+
+  .membership-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 280px;
+  }
+}
