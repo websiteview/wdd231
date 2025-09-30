@@ -1,0 +1,117 @@
+/* Reset & basics */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fafafa;
+  color: #333;
+}
+
+header {
+  background-color: #2e8b57; /* Forest green */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav ul.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul.nav-list li a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+/* Visit message styling */
+.visit-message {
+  background: #d9ead3;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Cards container grid layout for small screen */
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #2e8b57;
+}
+
+.card figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.card figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: none; /* no hover effect on mobile */
+}
+
+.card address {
+  font-style: normal;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.card p {
+  flex-grow: 1;
+}
+
+.card button {
+  background-color: #2e8b57;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #246644;
+}
+
+footer {
+  background-color: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

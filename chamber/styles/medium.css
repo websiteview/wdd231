@@ -1,0 +1,21 @@
+/* Medium screens: 641px to 1024px */
+@media (min-width: 641px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+
+  /* Image hover effect on medium and larger screens */
+  .card figure img:hover {
+    filter: brightness(0.8) saturate(1.2);
+    transform: scale(1.05);
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+}
+
+/* Large screens: 1025px and up */
+@media (min-width: 1025px) {
+  .cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
