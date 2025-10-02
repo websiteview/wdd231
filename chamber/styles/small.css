@@ -1,182 +1,51 @@
-/* ========== BASE STYLES & MOBILE FIRST ========== */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Roboto', Arial, sans-serif;
-  line-height: 1.6;
-  padding: 1rem;
-  background-color: #f5f5f5;
-}
-
-/* HEADER layout con flex como Student Progress */
-header {
+/* === DIRECTORY MOBILE STYLES === */
+#directory {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   align-items: center;
-  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.card, .list-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
   padding: 1rem;
+  width: 90%;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
   margin-bottom: 1rem;
 }
 
-/* Logo alinea items igual que Student Progress */
-.logo {
-  height: 40px;
+.list-item {
+  text-align: left;
+}
+
+.view-toggle {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
-.logo img {
-  border-radius: 8px;
-  height: 40px;  /* para igualar tamaño */
-}
-
-#menuBtn {
-  display: block; /* Mantener visible en mobile */
+.view-toggle button {
   font-size: 1.5rem;
-  background: none;
+  padding: 0.5rem;
+  background: #0077b6;
+  color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-/* NAV layout oculto y luego visible en mobile */
-nav {
-  display: none;
-  flex-direction: column;
-  gap: 1rem;
-  background-color: #f4f4f4;
-  padding: 1rem;
-  margin-top: 0.5rem;
-}
-
-nav.open {
-  display: flex;
-}
-
-/* Links nav estilos para simular Student Progress */
-#navMenu {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 0.5rem;
-  padding: 0;
-}
-
-#navMenu a {
-  text-decoration: none;
-  color: #0077b6;
-  font-weight: bold;
-}
-
-#navMenu a.active {
-  background-color: rgba(0,0,0,0.3);
-  color: white;
-  border-radius: 5px;
-  padding: 0.5rem;
-}
-
-/* HERO con margin bottom igual */
-.hero {
-  margin-bottom: 2rem;
-  position: relative;
-  text-align: center;
-}
-
-.hero img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.cta {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.cta .btn {
-  background-color: #0077b6;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
-
-.cta .btn:hover {
-  background-color: #005f73;
-}
-
-/* SPOTLIGHT container flex column */
-.spotlight-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* Footer */
-footer {
-  margin-top: 2rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* Responsive Nav (hamburger) on mobile */
-@media (max-width: 768px) {
-  #menuBtn {
-    display: block;
-  }
-
-  #navMenu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #navMenu.open {
-    display: flex;
-  }
-}
-
-/* CARDS container y CARD igual que Student Progress */
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-}
-
-.card {
-  width: 90%;
-  max-width: 300px;
-  min-height: 120px;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #fff;
-  text-align: center;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.card h3 {
-  margin: 0.5rem 0 0.25rem;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.card p {
-  margin: 0.25rem 0;
-  font-size: 0.85rem;
-  color: #444;
+.view-toggle button.active {
+  background: #023e8a;
 }
