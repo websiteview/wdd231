@@ -1,13 +1,13 @@
 /* Medium screens: 641px to 1024px */
-@media (min-width: 641px) {
+@media (min-width: 641px) and (max-width: 1024px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.5rem;
+    gap: 1.5rem;
   }
 
-  /* Image hover effect on medium and larger screens */
+  /* Image hover effect on medium screens only */
   .card figure img:hover {
-    filter: brightness(0.8) saturate(1.2);
+    filter: brightness(0.85) saturate(1.1);
     transform: scale(1.05);
     transition: filter 0.3s ease, transform 0.3s ease;
   }
@@ -17,5 +17,13 @@
 @media (min-width: 1025px) {
   .cards-container {
     grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Image hover effect on large screens */
+  .card figure img:hover {
+    filter: brightness(0.85) saturate(1.1);
+    transform: scale(1.1);
+    transition: filter 0.3s ease, transform 0.3s ease;
   }
 }
