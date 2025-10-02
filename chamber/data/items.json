@@ -3,48 +3,48 @@
     "title": "City Museum",
     "address": "123 Museum Lane, Chamber City",
     "description": "Explore the history and culture of our city at the City Museum.",
-    "image": "images/img1.webp"
+    "image": "images/museum-xela.jpg"
   },
   {
     "title": "Riverwalk Park",
     "address": "456 River Rd, Chamber City",
     "description": "Enjoy scenic walking trails and picnic areas at Riverwalk Park.",
-    "image": "images/img2.webp"
+    "image": "images/trees-lagoon.jpg"
   },
   {
     "title": "Downtown Theater",
     "address": "789 Theater Ave, Chamber City",
     "description": "Catch live performances and plays at the historic Downtown Theater.",
-    "image": "images/img3.webp"
+    "image": "images/downtown.webp"
   },
   {
-    "title": "City Aquarium",
+    "title": "Mountain Hiking",
     "address": "101 Ocean Blvd, Chamber City",
     "description": "Discover marine life at the City Aquarium with interactive exhibits.",
-    "image": "images/img4.webp"
+    "image": "images/volcan-santa-maria.jpg"
   },
   {
     "title": "Botanical Gardens",
     "address": "202 Garden St, Chamber City",
     "description": "Relax among beautiful plants and seasonal floral displays.",
-    "image": "images/img5.webp"
+    "image": "images/botanical.jpg"
   },
   {
     "title": "Historic Old Town",
     "address": "303 Heritage Dr, Chamber City",
     "description": "Experience the charm of the past in the Historic Old Town district.",
-    "image": "images/img6.webp"
+    "image": "images/historic-quetzaltenango.jpg"
   },
   {
     "title": "Art Gallery",
     "address": "404 Creative Way, Chamber City",
     "description": "Browse collections from local artists and rotating exhibits.",
-    "image": "images/img7.webp"
+    "image": "images/art-gallery.jpg"
   },
   {
     "title": "Community Library",
     "address": "505 Book Ln, Chamber City",
     "description": "Find books, attend workshops, and join community events at the library.",
-    "image": "images/img8.webp"
+    "image": "images/library.jpg"
   }
 ]
