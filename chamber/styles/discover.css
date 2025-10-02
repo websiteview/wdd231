@@ -49,6 +49,14 @@ main {
   flex: 1 0 auto;
 }
 
+/* New styling for main h1 */
+main > h1 {
+  text-align: center;
+  color: #2e8b57; /* Forest green */
+  margin: 1.5rem 0;
+  font-weight: bold;
+}
+
 /* Visit message styling */
 .visit-message {
   background: #d9ead3;
