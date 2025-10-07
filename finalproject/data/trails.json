@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Angel’s Landing",
+    "location": "Zion National Park, Utah, USA",
+    "length": "5.4 mi",
+    "difficulty": "Strenuous",
+    "image": "images/angels-landing.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Half Dome",
+    "location": "Yosemite National Park, California, USA",
+    "length": "14.2 mi",
+    "difficulty": "Very Strenuous",
+    "image": "images/half-dome.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Mist Trail",
+    "location": "Yosemite National Park, California, USA",
+    "length": "7.0 mi",
+    "difficulty": "Moderate",
+    "image": "images/mist-trail.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Bright Angel Trail",
+    "location": "Grand Canyon National Park, Arizona, USA",
+    "length": "12.0 mi",
+    "difficulty": "Hard",
+    "image": "images/bright-angel.jpg"
+  },
+  {
+    "id": 5,
+    "name": "The Narrows (Bottom-Up)",
+    "location": "Zion National Park, Utah, USA",
+    "length": "9.0 mi",
+    "difficulty": "Moderate",
+    "image": "images/narrows.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Kalalau Trail",
+    "location": "Na Pali Coast, Kauai, Hawaii, USA",
+    "length": "22.0 mi",
+    "difficulty": "Strenuous",
+    "image": "images/kalalau.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Angel’s Rest",
+    "location": "Columbia River Gorge, Oregon, USA",
+    "length": "4.8 mi",
+    "difficulty": "Moderate",
+    "image": "images/angels-rest.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Appalachian Trail (Section)",
+    "location": "Great Smoky Mountains, USA",
+    "length": "16.0 mi",
+    "difficulty": "Hard",
+    "image": "images/appalachian.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Inca Trail",
+    "location": "Peru",
+    "length": "26.0 mi",
+    "difficulty": "Hard",
+    "image": "images/inca-trail.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Waimea Canyon Trail",
+    "location": "Kauai, Hawaii, USA",
+    "length": "5.0 mi",
+    "difficulty": "Moderate",
+    "image": "images/waimea-canyon.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Panther Creek Falls Trail",
+    "location": "Washington State, USA",
+    "length": "6.2 mi",
+    "difficulty": "Moderate",
+    "image": "images/panther-creek.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Cascade Pass Trail",
+    "location": "North Cascades National Park, Washington, USA",
+    "length": "12.2 mi",
+    "difficulty": "Moderate",
+    "image": "images/cascade-pass.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Mount Toubkal",
+    "location": "Atlas Mountains, Morocco",
+    "length": "13.5 mi",
+    "difficulty": "Strenuous",
+    "image": "images/toubkal.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Torres del Paine “W” Trek",
+    "location": "Patagonia, Chile",
+    "length": "33.0 mi",
+    "difficulty": "Strenuous",
+    "image": "images/torres-w.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Tongariro Alpine Crossing",
+    "location": "New Zealand",
+    "length": "12.0 mi",
+    "difficulty": "Hard",
+    "image": "images/tongariro.jpg"
+  }
+]

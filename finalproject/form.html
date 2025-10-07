@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Subscribe to EcoTrail Adventures newsletter" />
+  <meta name="author" content="Your Name" />
+  <meta property="og:title" content="Subscribe | EcoTrail Adventures" />
+  <meta property="og:description" content="Join our newsletter for eco hiking updates" />
+  <link rel="stylesheet" href="styles/finalproject.css" />
+  <link rel="icon" href="favicon.ico" />
+  <title>Subscribe | EcoTrail Adventures</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand">EcoTrail Adventures</div>
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trails.html">Trails</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="form.html">Subscribe</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Subscribe</h1>
+    <form action="form-response.html" method="GET" id="subscribe-form">
+      <label>Name: <input type="text" name="name" required></label>
+      <label>Email: <input type="email" name="email" required></label>
+      <label>Favorite Trail: <input type="text" name="trail"></label>
+      <button type="submit">Join</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2025 EcoTrail Adventures | <a href="https://example.com/video-demo">Video Demo</a></p>
+  </footer>
+  <script src="scripts/form.js"></script>
+</body>
+</html>
