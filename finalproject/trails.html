@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="List of hiking trails – EcoTrail Adventures" />
-  <meta name="author" content="Your Name" />
-  <meta property="og:title" content="Trails – EcoTrail Adventures" />
-  <meta property="og:description" content="Explore all eco hiking trails featured" />
-  <link rel="stylesheet" href="styles/finalproject.css" />
-  <link rel="icon" href="favicon.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="List of hiking trails – EcoTrail Adventures">
+  <link rel="stylesheet" href="styles/finalproject.css">
   <title>Trails | EcoTrail Adventures</title>
 </head>
 <body>
@@ -18,20 +14,37 @@
       <button class="hamburger" aria-label="Toggle menu">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="trails.html">Trails</a></li>
+        <li><a href="trails.html" class="active">Trails</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="form.html">Subscribe</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
     <h1>All Trails</h1>
+
+    <!-- Filter and Sort -->
+    <section class="trail-controls">
+      <input type="text" id="trail-filter" placeholder="Search trails...">
+      <select id="trail-sort">
+        <option value="">Sort by...</option>
+        <option value="name">Name</option>
+        <option value="difficulty">Difficulty</option>
+        <option value="length">Length</option>
+      </select>
+    </section>
+
+    <!-- Trails will be injected here -->
     <section id="all-trails" class="trail-list"></section>
   </main>
+
   <footer>
-    <p>&copy; 2025 EcoTrail Adventures | <a href="https://example.com/video-demo">Video Demo</a></p>
+    <p>&copy; 2025 EcoTrail Adventures</p>
   </footer>
-  <script type="module" src="scripts/main.js"></script>
+
+  <!-- Correct scripts -->
+  <script type="module" src="scripts/trails.js"></script>
   <script src="scripts/storage.js"></script>
   <script src="scripts/modal.js"></script>
 </body>

@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Subscribe to EcoTrail Adventures newsletter" />
-  <meta name="author" content="Your Name" />
-  <meta property="og:title" content="Subscribe | EcoTrail Adventures" />
-  <meta property="og:description" content="Join our newsletter for eco hiking updates" />
-  <link rel="stylesheet" href="styles/finalproject.css" />
-  <link rel="icon" href="favicon.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Subscribe to EcoTrail Adventures newsletter">
+  <link rel="stylesheet" href="styles/finalproject.css">
   <title>Subscribe | EcoTrail Adventures</title>
 </head>
 <body>
@@ -20,11 +16,13 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="trails.html">Trails</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="form.html">Subscribe</a></li>
+        <li><a href="form.html" class="active">Subscribe</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
+    
     <h1>Subscribe</h1>
     <form action="form-response.html" method="GET" id="subscribe-form">
       <label>Name: <input type="text" name="name" required></label>
@@ -33,9 +31,12 @@
       <button type="submit">Join</button>
     </form>
   </main>
+
   <footer>
-    <p>&copy; 2025 EcoTrail Adventures | <a href="https://example.com/video-demo">Video Demo</a></p>
+    <p>&copy; 2025 EcoTrail Adventures</p>
   </footer>
+
   <script src="scripts/form.js"></script>
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
