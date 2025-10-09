@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Subscription confirmation – EcoTrail Adventures" />
-  <meta name="author" content="Your Name" />
-  <meta property="og:title" content="Thank You | EcoTrail Adventures" />
-  <meta property="og:description" content="Thank you for subscribing!" />
-  <link rel="stylesheet" href="styles/finalproject.css" />
-  <link rel="icon" href="favicon.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Subscription confirmation – EcoTrail Adventures">
+  <link rel="stylesheet" href="styles/finalproject.css">
   <title>Thank You | EcoTrail Adventures</title>
 </head>
 <body>
@@ -24,20 +20,18 @@
       </ul>
     </nav>
   </header>
+
   <main>
+    
     <h1>Thank You!</h1>
     <p id="result"></p>
   </main>
+
   <footer>
-    <p>&copy; 2025 EcoTrail Adventures | <a href="https://example.com/video-demo">Video Demo</a></p>
+    <p>&copy; 2025 EcoTrail Adventures</p>
   </footer>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const name = params.get('name') || 'Visitor';
-    const email = params.get('email') || '';
-    const trail = params.get('trail') || 'No trail specified';
-    document.getElementById('result').textContent =
-      `Hello ${name}, thank you for subscribing! You listed "${trail}" as your favorite trail.`;
-  </script>
+
+
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
