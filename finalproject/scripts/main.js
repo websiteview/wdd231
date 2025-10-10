@@ -1,9 +1,12 @@
+// scripts/main.js
 import { displayTrails } from './modules/trailModule.js';
 
+// Load JSON data and display trails on appropriate pages
 async function loadTrails() {
   try {
-    const resp = await fetch('./data/trails.json'); // relative to the HTML page
+    const resp = await fetch('./data/trails.json'); // relative to current HTML page
     if (!resp.ok) throw new Error('Failed to fetch trails.json');
+
     const trails = await resp.json();
 
     // Display featured trails on index.html
@@ -23,11 +26,14 @@ async function loadTrails() {
     const featuredSection = document.querySelector('#featured-trails');
     const allTrailsSection = document.querySelector('#all-trails');
 
-    if (featuredSection) featuredSection.innerHTML = `<p class="error">Unable to load featured trails.</p>`;
-    if (allTrailsSection) allTrailsSection.innerHTML = `<p class="error">Unable to load all trails.</p>`;
+    if (featuredSection)
+      featuredSection.innerHTML = `<p class="error">Unable to load featured trails.</p>`;
+    if (allTrailsSection)
+      allTrailsSection.innerHTML = `<p class="error">Unable to load all trails.</p>`;
   }
 }
 
+// Responsive hamburger menu for all pages
 function setupMenu() {
   const burger = document.querySelector('.hamburger');
   const nav = document.querySelector('.nav-links');
@@ -35,13 +41,16 @@ function setupMenu() {
   if (burger && nav) {
     burger.addEventListener('click', () => nav.classList.toggle('show'));
 
+    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-      if (!nav.contains(e.target) && !burger.contains(e.target)) nav.classList.remove('show');
+      if (!nav.contains(e.target) && !burger.contains(e.target)) {
+        nav.classList.remove('show');
+      }
     });
   }
 }
 
-// Highlight current nav link for wayfinding
+// Highlight current page link
 function highlightCurrentNav() {
   const links = document.querySelectorAll('.nav-links li a');
   links.forEach(link => {
@@ -51,6 +60,7 @@ function highlightCurrentNav() {
   });
 }
 
+// DOMContentLoaded: run all setup functions
 document.addEventListener('DOMContentLoaded', () => {
   loadTrails();
   setupMenu();

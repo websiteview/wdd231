@@ -88,6 +88,56 @@ h1, h2, h3 {
   margin: 0 auto;
 }
 
+/* --- Centered Content Section (About & Form) --- */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  gap: 1rem;
+}
+
+.content form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.content form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.content form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.content form button {
+  margin-top: 0.5rem;
+  background-color: #2E8B57;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.content form button:hover {
+  background-color: #246749;
+}
+
 /* --- Trail Cards --- */
 .trail-list {
   display: grid;
@@ -149,6 +199,25 @@ h1, h2, h3 {
   cursor: pointer;
   border-radius: 6px;
   font-size: 0.95rem;
+}
+
+/* --- Trail Controls --- */
+.trail-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.trail-controls input,
+.trail-controls select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 /* --- Footer --- */
@@ -234,6 +303,15 @@ footer {
   .trail-card img {
     height: 180px;
   }
+
+  .trail-controls {
+    flex-direction: column;
+  }
+
+  .content {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -247,5 +325,12 @@ footer {
 
   .trail-info p, .trail-info button {
     font-size: 0.9rem;
+  }
+
+  .trail-controls input,
+  .trail-controls select,
+  .content form input,
+  .content form button {
+    width: 90%;
   }
 }
