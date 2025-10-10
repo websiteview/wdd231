@@ -171,7 +171,7 @@ h1, h2, h3 {
 .trail-card img {
   width: 100%;
   height: 200px;
-  object-fit: contain;
+  object-fit: cover; /* mejor que contain para que se vea la imagen completa */
   background-color: #f0f0f0;
 }
 
@@ -276,7 +276,9 @@ footer {
   }
 }
 
+/* --- Mobile Styles --- */
 @media (max-width: 768px) {
+  /* Navbar mobile */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -286,6 +288,7 @@ footer {
     top: 60px;
     left: 0;
     padding: 1rem 0;
+    z-index: 100;
   }
 
   .nav-links.show {
@@ -294,6 +297,11 @@ footer {
 
   .hamburger {
     display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
   }
 
   .trail-list {

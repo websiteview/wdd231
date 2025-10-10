@@ -1,5 +1,5 @@
 // scripts/main.js
-import { displayTrails } from './modules/trailModule.js';
+import { displayTrails } from '../modules/trailModule.js';
 
 // Load JSON data and display trails on appropriate pages
 async function loadTrails() {
