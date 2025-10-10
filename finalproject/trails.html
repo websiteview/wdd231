@@ -26,6 +26,7 @@
 
     <!-- Filter and Sort -->
     <section class="trail-controls">
+      <h2 class="visually-hidden">Filter and Sort Trails</h2>
       <input type="text" id="trail-filter" placeholder="Search trails...">
       <select id="trail-sort">
         <option value="">Sort by...</option>
@@ -36,7 +37,9 @@
     </section>
 
     <!-- Trails will be injected here -->
-    <section id="all-trails" class="trail-list"></section>
+    <section id="all-trails" class="trail-list">
+      <h2 class="visually-hidden">All Available Trails</h2>
+    </section>
   </main>
 
   <footer>
@@ -48,6 +51,5 @@
   <script src="scripts/storage.js"></script>
   <script src="scripts/modal.js"></script>
   <script src="scripts/navbar.js"></script>
-
 </body>
 </html>
